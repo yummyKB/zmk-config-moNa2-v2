@@ -1,42 +1,42 @@
 #include "mona2.dtsi"
+#include <dt-bindings/zmk/input_transform.h>  // includeは上にまとめる
 
 &kscan0 {
-        col-gpios
-            = <&xiao_d 10 GPIO_ACTIVE_HIGH>
-            , <&xiao_d 9 GPIO_ACTIVE_HIGH> 
-            , <&xiao_d 8 GPIO_ACTIVE_HIGH> 
-            , <&xiao_d 7 GPIO_ACTIVE_HIGH> 
-            , <&gpio0 10 GPIO_ACTIVE_HIGH>
-            , <&gpio0 9 GPIO_ACTIVE_HIGH>
-            ;
+    col-gpios
+        = <&xiao_d 10 GPIO_ACTIVE_HIGH>
+        , <&xiao_d 9 GPIO_ACTIVE_HIGH> 
+        , <&xiao_d 8 GPIO_ACTIVE_HIGH> 
+        , <&xiao_d 7 GPIO_ACTIVE_HIGH> 
+        , <&gpio0 10 GPIO_ACTIVE_HIGH>
+        , <&gpio0 9 GPIO_ACTIVE_HIGH>
+        ;
 };
 
 &left_encoder {
     status = "okay";
 };
 
-#include <dt-bindings/zmk/input_transform.h>
-
+/* ピン設定 */
 &pinctrl {
-    /* configuration for i2c0 device, default state */
     i2c0_default: i2c0_default {
         group1 {
             psels = <NRF_PSEL(TWIM_SDA, 0, 4)>,
-                <NRF_PSEL(TWIM_SCL, 0, 5)>;
+                    <NRF_PSEL(TWIM_SCL, 0, 5)>;
         };
     };
 
     i2c0_sleep: i2c0_sleep {
         group1 {
             psels = <NRF_PSEL(TWIM_SDA, 0, 4)>,
-                <NRF_PSEL(TWIM_SCL, 0, 5)>;
+                    <NRF_PSEL(TWIM_SCL, 0, 5)>;
             low-power-enable;
         };
     };
 };
 
+/* I2C設定 */
 &i2c0 {
-    compatible = "nordic,nrf-twim"; // I2C controller instead of generic
+    compatible = "nordic,nrf-twim";
     status = "okay";
     pinctrl-0 = <&i2c0_default>;
     pinctrl-1 = <&i2c0_sleep>;
@@ -50,8 +50,11 @@
     };
 };
 
-trackball_input_listener {
+/* 入力リスナー（ルートノード直下に配置） */
+/ {
+    trackball_input_listener {
         compatible = "zmk,input-listener";
         device = <&trackball>;
         input-processors = <&zip_xy_scaler 4 1>;
+    };
 };
