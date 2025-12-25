@@ -38,3 +38,22 @@ config RGBLED_WIDGET_BATTERY_LEVEL_CRITICAL
     default 10
 
 endif
+
+if SHIELD_MONA2_L
+
+config ZMK_SPLIT_ROLE_CENTRAL
+    default n
+
+config INPUT
+    default y
+
+config ZMK_POINTING
+    default y
+
+config AZ1UBALL
+    default y
+
+CONFIG_I2C
+    default y
+
+endif
