@@ -96,8 +96,15 @@
             //<&zip_temp_layer 5 500>;                            //オートマウスレイヤーの選択
     };
 
+　　　//left hand trackball peripheral
+    trackball_peripheral_listener: trackball_peripheral_listener {
+        compatible = "zmk,input-listener";
+        device = <&trackball>; // i2c内に定義したトラックボールを指定
+        status = "disabled";   // 基本は無効にしておき、L側のoverlayでokayにする
+    };
+
     left_encoder: encoder_left {
-        compatible = "alps,ec11";
+        // compatible = "alps,ec11";
         //　a-gpios = <&xiao_d 5 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
         // b-gpios = <&xiao_d 0 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
         // steps = <24>;
