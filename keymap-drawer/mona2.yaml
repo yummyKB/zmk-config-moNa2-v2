@@ -99,7 +99,7 @@ layers:
   - _
   - '`'
   - '~'
-  - '"'
+  - '&msc SCRL_UP'
   - ''''
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -109,9 +109,9 @@ layers:
   - '='
   - +
   - F1
-  - F2
-  - F3
-  - F4
+  - '&msc SCRL_LEFT'
+  - '&msc SCRL_DOWN'
+  - '&msc SCRL_RIGHT'
   - F5
   - F11
   - F12
