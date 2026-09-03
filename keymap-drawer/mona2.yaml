@@ -42,7 +42,7 @@ layers:
   - {t: '&to_layer_0 LANG1', h: '1'}
   - {t: '&to_layer_0 SPACE', h: '4'}
   - {t: RETURN, h: '5'}
-  - LEFT ALT
+  - RIGHT SHIFT
   '1':
   - /
   - '7'
@@ -96,7 +96,7 @@ layers:
   - '~'
   - \
   - '|'
-  - _
+  - '~'
   - Ctl+F11
   - Ctl+F12
   - Alt+3
@@ -106,8 +106,8 @@ layers:
   - '&mkp MB3'
   - '&mkp MB1'
   - '&mkp MB2'
-  - '='
-  - +
+  - '{'
+  - '}'
   - Ctl+7
   - Ctl+F9
   - Alt+4
@@ -120,15 +120,15 @@ layers:
   - \
   - '['
   - ']'
-  - {t: ▽, type: trans}
+  - {t: LEFT SHIFT, h: toggle}
   - Alt+F1
   - Sft+F12
   - {t: ▽, type: trans}
   - {type: held}
   - {t: ▽, type: trans}
+  - RIGHT SHIFT
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - '|'
   '3':
   - Alt+8
   - Meh+1
@@ -161,8 +161,8 @@ layers:
   - {t: ▽, type: trans}
   - DELETE
   - PAGE UP
-  - PAGE DOWN
-  - {t: ▽, type: trans}
+  - '{'
+  - '}'
   - {t: ▽, type: trans}
   - Alt+F11
   - Alt+F12
@@ -189,11 +189,11 @@ layers:
   - Ctl+Alt+F4
   - Ctl+Sft+F11
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - {t: BT DISC, h: '0'}
+  - {t: BT DISC, h: '1'}
+  - {t: BT DISC, h: '2'}
+  - {t: BT DISC, h: '3'}
+  - {t: BT DISC, h: '4'}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - Alt+Ctl+F9
@@ -201,8 +201,8 @@ layers:
   - Ctl+Sft+F12
   - {t: ▽, type: trans}
   - '&bootloader'
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - BT PRV
+  - BT NXT
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - BT CLR
@@ -231,8 +231,8 @@ layers:
   - '&msc SCRL_UP'
   - '&mkp MB1'
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - '&msc SCRL_UP'
+  - '&msc SCRL_UP'
   - '&mkp MB1'
   - '&mkp MB2'
   - '&mkp MB3'
@@ -243,9 +243,9 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - '&msc SCRL_LEFT'
+  - '&msc SCRL_DOWN'
+  - '&msc SCRL_RIGHT'
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
