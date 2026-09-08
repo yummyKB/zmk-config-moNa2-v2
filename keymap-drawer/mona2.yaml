@@ -70,7 +70,7 @@ layers:
   - '2'
   - '3'
   - '0'
-  - {t: ▽, type: trans}
+  - DELETE
   - {t: ▽, type: trans}
   - LCTRL
   - '&'
